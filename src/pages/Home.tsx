@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -13,7 +13,12 @@ function Home() {
             <Link to={"/register"}>Register</Link>
           </div>
         ) : (
-          <div className="text-white">You are <span className="text-red-500 uppercase">{localStorage.getItem("token")}</span></div>
+          <div className="text-white">
+            You are{" "}
+            <span className="text-red-500 uppercase">
+              {localStorage.getItem("token")}
+            </span>
+          </div>
         )}
       </div>
     </div>
